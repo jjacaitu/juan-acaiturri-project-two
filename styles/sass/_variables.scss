@@ -1,0 +1,12 @@
+$darkerColor: #1A315C;
+$lighterColor: #CCEDFB;
+$mainColor: #0CADC0;
+$firstBlack: #1E1713;
+$secondBlack: #161515;
+$backgroundColor: #21404F;
+
+@mixin mq-tablet {
+    @media (max-width:1023px) {
+        @content
+    }
+}
