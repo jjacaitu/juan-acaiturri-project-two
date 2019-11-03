@@ -66,9 +66,7 @@ main {
             display: flex;
             flex-wrap: wrap;
 
-            // @include mq-small-tablet {
-            //         ;
-            //     }
+            
 
             img {
                 width: calc(100% / 3 - (4% / 3));
@@ -398,7 +396,9 @@ main {
                 top: -20px;
 
                 @include mq-phone {
+                    
                     box-shadow: none;
+                    border: 10px solid $mainColor;
                     padding: 0;
                     width: 100%;
                     
@@ -436,6 +436,7 @@ main {
 
                 @include mq-phone {
                     box-shadow: none;
+                    border: 10px solid $mainColor;
                     padding: 0;
                     width: 100%;
                     margin: 0;
@@ -571,7 +572,7 @@ main {
             @include mq-tablet {
                 box-shadow: none;
                 width: 100%;
-                position: initial;
+                
             }
 
             @include mq-phone {
@@ -603,7 +604,7 @@ main {
                 width: 100%;
                 text-align: center;
                 margin-left: 0;
-                padding-top: 50px;
+                
             }
             ul {
                 display: flex;

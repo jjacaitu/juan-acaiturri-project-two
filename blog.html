@@ -19,7 +19,7 @@
                 <nav>
                     <ul>
                         <li><a href="./index.html">home</a></li>
-                        <li><a href="#">about</a></li>
+                        <li><a href="./blog.html#about">about</a></li>
                         <li><a href="#">blog</a></li>
                         <li><a href="./contact.html">contact</a></li>
                     </ul>
@@ -42,7 +42,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ut cupiditate id tempora corrupti numquam nulla fugit perferendis hic sit!</p>
                 </div>
             </section>
-            <aside class="mission">
+            <aside class="mission" id="about">
                 <div class="image_container mission_image"></div>
                 <div class="information">
                     <h2>Our mission</h2>
@@ -81,15 +81,15 @@
                 <form action="">
                     <fieldset>
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name">
+                        <input type="text" id="name" name="name" required>
                     </fieldset>
                     <fieldset>
                         <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </fieldset>
                     
                     <label for="comment"></label>
-                    <textarea name="comment" id="comment" cols="30" rows="8" placeholder="Comments"></textarea>
+                    <textarea name="comment" id="comment" cols="30" rows="8" placeholder="Comments" required></textarea>
 
                     <button class="button" type="submit">post comment</button>
                 </form>
