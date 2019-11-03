@@ -7,11 +7,18 @@ html {
         line-height: 28px;
         letter-spacing: 2px;
         color: $secondBlack;
+        overflow-x: hidden;
+
+        
 
         .wrapper {
             width: 80%;
             margin: 0 auto;
             max-width: 1500px;
+
+            @include mq-small-tablet {
+                width: 90%;
+            }
         }
 
     }
@@ -20,6 +27,11 @@ html {
 ul,li {
             list-style: none;
 
+}
+
+ul {
+    margin: 0;
+    // padding: 0;
 }
 
 a {
@@ -32,6 +44,8 @@ h1, h2, h3, h4, p {
     padding: 0;
 }
 
+
+
 img {
     width: 100%;
     display: block;
@@ -42,8 +56,12 @@ h1 {
         line-height: 64px;
         color: $darkerColor;
         font-family: 'Pacifico', cursive;
-        width: 800px;
-        margin-top: 100px;
+        width: 700px;
+        margin-top: 50px;
+
+        @include mq-tablet {
+            width: 350px;
+        }
 }
 
 h2 {
@@ -84,25 +102,50 @@ form {
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @include mq-tablet {
+        width: 100%;
+        
+    }
+
+    
+
 
     fieldset {
         border: none;
         display: flex;
         flex-direction: column;
-        flex-basis: 50%;
+        flex-basis: calc(100% / 2 );
         margin: 0;
         padding: 0;
+        min-width: 0;
+
+        @include mq-phone {
+            flex-basis: 100%;
+        }
+        
 
         &:first-child {
-            padding-right: 30px;
+            padding-right: 10px;
+            @include mq-tablet {
+                // padding-right: 15px;
+            }
         }
 
         &:nth-child(2) {
-            padding-left: 30px;
+            padding-left: 10px;
+            @include mq-phone {
+                padding-left: 0;
+            }
         }
 
         label {
-            padding-left: 20px;
+            padding-left: 10px;
+
+            @include mq-phone {
+                padding-left: 0;
+                padding-top: 20px;
+                
+            }
         }
         
     }
@@ -114,6 +157,10 @@ form {
         border-bottom: 2px solid $mainColor;
         background-color: $lighterColor;
         padding-left: 20px;
+
+        @include mq-phone {
+            padding-left: 0;
+        }
         
     }
 

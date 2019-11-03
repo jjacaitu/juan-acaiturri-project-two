@@ -1,15 +1,59 @@
 header {
     height: 95vh;
-    min-height: 550px;
+    min-height: 700px;
     background-image: url(../assets/header-home.jpg);
     background-size: cover;
     position: relative;
+    // max-height: 800px;
+    background-position: top;
+    position: relative;
+
+    @include mq-tablet {
+            min-height: 500px;
+            height: 75vh;
+        }
 
     .header_top {
-
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: 30px;
+
+        input {
+            display: none;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            z-index: 1;
+            transition: all 0.5s;
+            font-size: 2rem;
+
+            .fas.fa-times {
+                display: none;
+                color: white;
+            }
+
+            @include mq-small-tablet {
+                display: block;
+            }
+        }
+
+        input:checked ~ nav{
+            right: 0;
+        }
+
+        input:checked + label .fas.fa-times{
+            display: block;
+        }
+
+        input:checked + label .fas.fa-bars{
+            display: none;
+        }
 
         .logo {
             font-size: 1.5rem;
@@ -21,17 +65,58 @@ header {
 
         nav {
 
+            @include mq-small-tablet {
+                position: absolute;
+                right: -100%;
+                bottom: 0;
+                top: 0;
+                transition: all 0.5s;
+                
+            }
+
             ul {
+
                 display: flex;
+                color: $darkerColor;
+
+                @include mq-small-tablet {
+                    
+                    flex-direction: column;
+                    background-color: $backgroundColor;
+                    height: 100%;
+                    color: white;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 50px 0;
+                    border: solid 5px $mainColor; 
+                }
+
+                li {
+                    width: 100%;
+                    margin: 0 20px;
+                }
+                
+
+                
 
                 a {
-                    margin: 0 20px;
+                    text-align: center;
                     text-transform: uppercase;
                     font-weight: bold;
                     font-size: 1rem;
                     line-height: 29px;
-                    color: $darkerColor;
+                    color: inherit;
                     position: relative;
+                    
+                    @include mq-small-tablet {
+                        width: 70%;
+                        height: 100%;
+                        display: block;
+                        padding: 0;
+                        margin: 0 auto;
+                    }
+
+                    
 
                     &::before {
                         content: "";
@@ -44,10 +129,15 @@ header {
                         right: 0;
                         background-color: $mainColor;
                         transition: all 0.5s;
+
+                        // @include mq-small-tablet {
+                        //     bottom: 0;
+                        // }
                     }
 
                     &:hover::before {
                         width: 100%;
+                        
                     }
                 }
             }
@@ -58,10 +148,15 @@ header {
 
     img {
         position: absolute;
-        width: 100vh;
+        width: 60vw;
         min-width: 600px;
-        bottom: -12vw;
+        bottom: -14vw;
         left: 0;
+        max-width: 950px;
+
+        @include mq-tablet {
+            display: none;
+        }
     }
 
     
@@ -77,10 +172,19 @@ header {
 .blog_header {
     background-image: url("../assets/blog-header.jpg");
 
+    h1 {
+        margin-top: 150px;
+    }
+
     
 }
 
 .contact_header {
     background-image: url("../assets/contact-header.jpg");
     background-position: right;
+
+    h1 {
+        width: 100%;
+        margin-top: 150px;
+    }
 }

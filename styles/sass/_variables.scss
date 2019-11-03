@@ -6,7 +6,25 @@ $secondBlack: #161515;
 $backgroundColor: #21404F;
 
 @mixin mq-tablet {
-    @media (max-width:1023px) {
+    @media (max-width:980px) {
+        @content
+    }
+}
+
+@mixin mq-height-restriction {
+    @media (max-height:500px){
+        @content
+    }
+}
+
+@mixin mq-small-tablet {
+    @media (max-width: 770px){
+        @content
+    }
+}
+
+@mixin mq-phone {
+    @media (max-width: 550px){
         @content
     }
 }
