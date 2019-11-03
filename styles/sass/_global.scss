@@ -1,5 +1,6 @@
 html {
     font-size: 125%;
+    overflow-x: hidden;
 
     body {
         font-family: 'Lato', sans-serif;
@@ -15,6 +16,7 @@ html {
             width: 80%;
             margin: 0 auto;
             max-width: 1500px;
+            
 
             @include mq-small-tablet {
                 width: 90%;

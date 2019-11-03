@@ -181,6 +181,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 html {
   font-size: 125%;
+  overflow-x: hidden;
 }
 
 html body {
