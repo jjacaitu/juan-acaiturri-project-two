@@ -20,40 +20,7 @@ header {
         align-items: center;
         padding-top: 30px;
 
-        input {
-            display: none;
-        }
-
-        .menu {
-            display: none;
-            position: absolute;
-            right: 20px;
-            cursor: pointer;
-            z-index: 1;
-            transition: all 0.5s;
-            font-size: 2rem;
-
-            .fas.fa-times {
-                display: none;
-                color: white;
-            }
-
-            @include mq-small-tablet {
-                display: block;
-            }
-        }
-
-        input:checked ~ nav{
-            right: 0;
-        }
-
-        input:checked + label .fas.fa-times{
-            display: block;
-        }
-
-        input:checked + label .fas.fa-bars{
-            display: none;
-        }
+        
 
         .logo {
             font-size: 1.5rem;
@@ -65,14 +32,46 @@ header {
 
         nav {
 
-            @include mq-small-tablet {
-                position: absolute;
-                right: -100%;
-                bottom: 0;
-                top: 0;
-                transition: all 0.5s;
-                
+
+            input {
+                display: none;
             }
+
+            
+
+            input:checked ~ ul{
+                right: 0;
+            }
+
+            input:checked + label .fas.fa-times{
+                display: block;
+            }
+
+            input:checked + label .fas.fa-bars{
+                display: none;
+            }
+
+            .menu {
+                display: none;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                cursor: pointer;
+                z-index: 1;
+                transition: all 0.5s;
+                font-size: 2rem;
+
+                .fas.fa-times {
+                    display: none;
+                    color: white;
+                }
+
+                @include mq-small-tablet {
+                    display: block;
+                }
+            }
+
+            
 
             ul {
 
@@ -80,16 +79,23 @@ header {
                 color: $darkerColor;
 
                 @include mq-small-tablet {
-                    
+                    position: absolute;
+                    right: -100%;
+                    bottom: 0;
+                    top: 0;
+                    transition: all 0.5s;
                     flex-direction: column;
                     background-color: $backgroundColor;
-                    height: 100%;
+                    height: 80%;
                     color: white;
                     justify-content: space-around;
                     align-items: center;
                     padding: 50px 0;
                     border: solid 5px $mainColor; 
+                    
                 }
+
+                
 
                 li {
                     width: 100%;
@@ -129,13 +135,9 @@ header {
                         right: 0;
                         background-color: $mainColor;
                         transition: all 0.5s;
-
-                        // @include mq-small-tablet {
-                        //     bottom: 0;
-                        // }
                     }
 
-                    &:hover::before {
+                    &:hover::before, &:focus::before {
                         width: 100%;
                         
                     }

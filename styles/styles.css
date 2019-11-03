@@ -193,6 +193,21 @@ html body {
   overflow-x: hidden;
 }
 
+html body .skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 20px;
+  z-index: 999;
+  background: #21404F;
+  color: white;
+  border: 3px solid #0CADC0;
+  padding: 10px;
+}
+
+html body .skip-link:focus {
+  left: 20%;
+}
+
 html body .wrapper {
   width: 80%;
   margin: 0 auto;
@@ -401,44 +416,6 @@ header .header_top {
   padding-top: 30px;
 }
 
-header .header_top input {
-  display: none;
-}
-
-header .header_top .menu {
-  display: none;
-  position: absolute;
-  right: 20px;
-  cursor: pointer;
-  z-index: 1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  font-size: 2rem;
-}
-
-header .header_top .menu .fas.fa-times {
-  display: none;
-  color: white;
-}
-
-@media (max-width: 770px) {
-  header .header_top .menu {
-    display: block;
-  }
-}
-
-header .header_top input:checked ~ nav {
-  right: 0;
-}
-
-header .header_top input:checked + label .fas.fa-times {
-  display: block;
-}
-
-header .header_top input:checked + label .fas.fa-bars {
-  display: none;
-}
-
 header .header_top .logo {
   font-size: 1.5rem;
   font-family: 'Pacifico', cursive;
@@ -447,14 +424,42 @@ header .header_top .logo {
   text-transform: capitalize;
 }
 
+header .header_top nav input {
+  display: none;
+}
+
+header .header_top nav input:checked ~ ul {
+  right: 0;
+}
+
+header .header_top nav input:checked + label .fas.fa-times {
+  display: block;
+}
+
+header .header_top nav input:checked + label .fas.fa-bars {
+  display: none;
+}
+
+header .header_top nav .menu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 2rem;
+}
+
+header .header_top nav .menu .fas.fa-times {
+  display: none;
+  color: white;
+}
+
 @media (max-width: 770px) {
-  header .header_top nav {
-    position: absolute;
-    right: -100%;
-    bottom: 0;
-    top: 0;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+  header .header_top nav .menu {
+    display: block;
   }
 }
 
@@ -467,12 +472,18 @@ header .header_top nav ul {
 
 @media (max-width: 770px) {
   header .header_top nav ul {
+    position: absolute;
+    right: -100%;
+    bottom: 0;
+    top: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     background-color: #21404F;
-    height: 100%;
+    height: 80%;
     color: white;
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -523,7 +534,7 @@ header .header_top nav ul a::before {
   transition: all 0.5s;
 }
 
-header .header_top nav ul a:hover::before {
+header .header_top nav ul a:hover::before, header .header_top nav ul a:focus::before {
   width: 100%;
 }
 
