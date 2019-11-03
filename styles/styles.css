@@ -668,7 +668,7 @@ main .gallery .gallery_main img {
   main .gallery .gallery_main img {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
 }
 
@@ -823,6 +823,14 @@ main .commercial_types .commercial_types_main .information .button {
   color: #1E1713;
 }
 
+@media (max-width: 550px) {
+  main .commercial_types .commercial_types_main .information .button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
 main .commercial_types .commercial_types_main .information:nth-child(4) {
   padding-right: 0;
   padding-left: 10%;
@@ -838,10 +846,33 @@ main .commercial_types .commercial_types_main .information:nth-child(4) {
   }
 }
 
+@media (max-width: 550px) {
+  main .commercial_types .commercial_types_main .information:nth-child(4) {
+    text-align: start;
+    padding: 100px 5% 50px;
+  }
+}
+
 main .commercial_types .commercial_types_main .information:nth-child(4) h3, main .commercial_types .commercial_types_main .information:nth-child(4) .button {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+}
+
+@media (max-width: 550px) {
+  main .commercial_types .commercial_types_main .information:nth-child(4) h3, main .commercial_types .commercial_types_main .information:nth-child(4) .button {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+}
+
+@media (max-width: 550px) {
+  main .commercial_types .commercial_types_main .information:nth-child(4) .button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 main .commercial_types .commercial_types_main .online_image_positioning {
