@@ -6,6 +6,13 @@ main {
         color: white;
         font-family: 'Pacifico', cursive;
         margin-top: 30px;
+        transition: all 0.3s;
+
+        &:hover, :focus {
+            background-color: $mainColor;
+            color: $darkerColor;
+            box-shadow: 10px 10px 0 $backgroundColor;
+        }
         
     }
 
@@ -71,11 +78,16 @@ main {
             img {
                 width: calc(100% / 3 - (4% / 3));
                 margin-right: 2%;
+                transition: all 0.3s;
 
                 @include mq-small-tablet {
                     width: 100%;
                     margin-right: 0;
                     margin-bottom: 10%;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
                 }
 
                 &:nth-of-type(3){
@@ -197,6 +209,13 @@ main {
 
                     @include mq-phone {
                         align-self: center;
+                    }
+
+                    &:hover, :focus {
+                        background-color: $backgroundColor;
+                        color: $lighterColor;
+                        box-shadow: 10px 10px 0 $lighterColor;
+                        border: solid 1px $mainColor;
                     }
                 }
 
@@ -512,7 +531,7 @@ main {
 
                 @include mq-phone {
                     width: 30%;
-                    padding-bottom: 40px;
+                    margin-bottom: 40px;
                 }
             }
             .comment_detail {
@@ -591,6 +610,13 @@ main {
             button {
                 background-color: $lighterColor;
                 color: $firstBlack;
+
+                &:hover, :focus {
+                    background-color: $darkerColor;
+                    color: $lighterColor;
+                    box-shadow: 10px 10px 0 $lighterColor;
+                    border: solid 1px $mainColor;
+                }
             }
         }
 
@@ -620,6 +646,11 @@ main {
                 li {
                     margin-right: 20px;
                     color: $darkerColor;
+                    transition: all 0.5s;
+
+                    &:hover, :focus {
+                        animation: animate ease-in-out infinite 1s both;
+                    }
                 }
             }
 

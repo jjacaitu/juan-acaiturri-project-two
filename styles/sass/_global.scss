@@ -89,7 +89,7 @@ h2 {
     line-height: 58px;
     color: $darkerColor;
     padding-bottom: 20px;
-    text-transform: capitalize;
+    
 
 }
 
@@ -175,6 +175,7 @@ form {
         border-bottom: 2px solid $mainColor;
         background-color: $lighterColor;
         padding-left: 20px;
+        width: 100%;
 
         @include mq-phone {
             padding-left: 0;

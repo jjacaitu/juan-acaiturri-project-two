@@ -179,6 +179,38 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
+@-webkit-keyframes animate {
+  0%, 100% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    text-shadow: #0CADC0 1px 1px 0;
+  }
+  25%, 75% {
+    -webkit-transform: rotate(-25deg) scale(1.6);
+            transform: rotate(-25deg) scale(1.6);
+  }
+  50% {
+    -webkit-transform: rotate(25deg) scale(1.6);
+            transform: rotate(25deg) scale(1.6);
+  }
+}
+
+@keyframes animate {
+  0%, 100% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    text-shadow: #0CADC0 1px 1px 0;
+  }
+  25%, 75% {
+    -webkit-transform: rotate(-25deg) scale(1.6);
+            transform: rotate(-25deg) scale(1.6);
+  }
+  50% {
+    -webkit-transform: rotate(25deg) scale(1.6);
+            transform: rotate(25deg) scale(1.6);
+  }
+}
+
 html {
   font-size: 125%;
   overflow-x: hidden;
@@ -265,7 +297,6 @@ h2 {
   line-height: 58px;
   color: #1A315C;
   padding-bottom: 20px;
-  text-transform: capitalize;
 }
 
 h3 {
@@ -345,6 +376,7 @@ form input {
   border-bottom: 2px solid #0CADC0;
   background-color: #CCEDFB;
   padding-left: 20px;
+  width: 100%;
 }
 
 @media (max-width: 550px) {
@@ -403,6 +435,12 @@ header {
   }
 }
 
+@media (max-width: 550px) {
+  header .index_header {
+    width: 250px;
+  }
+}
+
 header .header_top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -447,8 +485,8 @@ header .header_top nav .menu {
   top: 20px;
   cursor: pointer;
   z-index: 1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   font-size: 2rem;
 }
 
@@ -534,8 +572,12 @@ header .header_top nav ul a::before {
   transition: all 0.5s;
 }
 
-header .header_top nav ul a:hover::before, header .header_top nav ul a:focus::before {
+header .header_top nav ul a:hover::before {
   width: 100%;
+}
+
+header .header_top nav ul a:focus {
+  border: solid 3px #0CADC0;
 }
 
 header img {
@@ -582,6 +624,15 @@ main .button {
   color: white;
   font-family: 'Pacifico', cursive;
   margin-top: 30px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .button:hover, main .button :focus {
+  background-color: #0CADC0;
+  color: #1A315C;
+  -webkit-box-shadow: 10px 10px 0 #21404F;
+          box-shadow: 10px 10px 0 #21404F;
 }
 
 main .new_techniques {
@@ -673,6 +724,8 @@ main .gallery .gallery_main {
 main .gallery .gallery_main img {
   width: calc(100% / 3 - (4% / 3));
   margin-right: 2%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media (max-width: 770px) {
@@ -681,6 +734,11 @@ main .gallery .gallery_main img {
     margin-right: 0;
     margin-bottom: 10%;
   }
+}
+
+main .gallery .gallery_main img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 main .gallery .gallery_main img:nth-of-type(3) {
@@ -840,6 +898,14 @@ main .commercial_types .commercial_types_main .information .button {
         -ms-grid-row-align: center;
         align-self: center;
   }
+}
+
+main .commercial_types .commercial_types_main .information .button:hover, main .commercial_types .commercial_types_main .information .button :focus {
+  background-color: #21404F;
+  color: #CCEDFB;
+  -webkit-box-shadow: 10px 10px 0 #CCEDFB;
+          box-shadow: 10px 10px 0 #CCEDFB;
+  border: solid 1px #0CADC0;
 }
 
 main .commercial_types .commercial_types_main .information:nth-child(4) {
@@ -1212,7 +1278,7 @@ main .comments article img {
 @media (max-width: 550px) {
   main .comments article img {
     width: 30%;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1315,6 +1381,14 @@ main .comments_main form button {
   color: #1E1713;
 }
 
+main .comments_main form button:hover, main .comments_main form button :focus {
+  background-color: #1A315C;
+  color: #CCEDFB;
+  -webkit-box-shadow: 10px 10px 0 #CCEDFB;
+          box-shadow: 10px 10px 0 #CCEDFB;
+  border: solid 1px #0CADC0;
+}
+
 main .comments_main .contact_info {
   margin-left: 100px;
   width: 300px;
@@ -1354,6 +1428,13 @@ main .comments_main .contact_info ul {
 main .comments_main .contact_info ul li {
   margin-right: 20px;
   color: #1A315C;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+main .comments_main .contact_info ul li:hover, main .comments_main .contact_info ul li :focus {
+  -webkit-animation: animate ease-in-out infinite 1s both;
+          animation: animate ease-in-out infinite 1s both;
 }
 
 main .comments_main .contact_info p:nth-of-type(1) {

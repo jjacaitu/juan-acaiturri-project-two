@@ -4,7 +4,6 @@ header {
     background-image: url(../assets/header-home.jpg);
     background-size: cover;
     position: relative;
-    // max-height: 800px;
     background-position: top;
     position: relative;
 
@@ -13,12 +12,21 @@ header {
             height: 75vh;
         }
 
+    .index_header {
+            
+            @include mq-phone {
+                width: 250px;
+            }
+        }
+
     .header_top {
         
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-top: 30px;
+
+        
 
         
 
@@ -58,7 +66,7 @@ header {
                 top: 20px;
                 cursor: pointer;
                 z-index: 1;
-                transition: all 0.5s;
+                transition: all 0.2s;
                 font-size: 2rem;
 
                 .fas.fa-times {
@@ -137,9 +145,13 @@ header {
                         transition: all 0.5s;
                     }
 
-                    &:hover::before, &:focus::before {
+                    &:hover::before  {
                         width: 100%;
                         
+                    }
+
+                    &:focus {
+                        border: solid 3px $mainColor;
                     }
                 }
             }
@@ -168,6 +180,8 @@ header {
     
     font-size: 3.4rem;
     line-height: 64px;
+
+    
     
 }
 
