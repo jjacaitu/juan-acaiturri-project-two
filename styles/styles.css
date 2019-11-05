@@ -588,9 +588,9 @@ header .header_top nav ul a:focus {
 
 header img {
   position: absolute;
-  width: 60vw;
+  width: 55vw;
   min-width: 600px;
-  bottom: -14vw;
+  bottom: -13vw;
   left: 0;
   max-width: 950px;
 }
