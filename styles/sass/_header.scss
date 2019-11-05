@@ -5,7 +5,6 @@ header {
     background-size: cover;
     position: relative;
     background-position: top;
-    position: relative;
 
     @include mq-tablet {
             min-height: 500px;
@@ -26,10 +25,6 @@ header {
         align-items: center;
         padding-top: 30px;
 
-        
-
-        
-
         .logo {
             font-size: 1.5rem;
             font-family: 'Pacifico', cursive;
@@ -40,12 +35,9 @@ header {
 
         nav {
 
-
             input {
                 display: none;
             }
-
-            
 
             input:checked ~ ul{
                 right: 0;
@@ -111,10 +103,7 @@ header {
                     margin: 0 20px;
                 }
                 
-
-                
-
-                a {
+                a,span {
                     text-align: center;
                     text-transform: uppercase;
                     font-weight: bold;
@@ -122,6 +111,7 @@ header {
                     line-height: 29px;
                     color: inherit;
                     position: relative;
+                    transition: all 0.5s;
                     
                     @include mq-small-tablet {
                         width: 70%;
@@ -132,28 +122,32 @@ header {
                     }
 
                     
+                }
 
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        bottom: -10px;
-                        width: 0;
-                        height: 5px;
-                        border-radius: 20px;
-                        left: 0;
-                        right: 0;
-                        background-color: $mainColor;
-                        transition: all 0.5s;
-                    }
+                a:hover {
+                    text-shadow: 2px 2px $mainColor;
+                }
 
-                    &:hover::before  {
-                        width: 100%;
-                        
-                    }
+                span {
+                    display: block;
+                    
+                }
 
-                    &:focus {
-                        border: solid 3px $mainColor;
-                    }
+                span::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    width: 100%;
+                    height: 3px;
+                    border-radius: 20px;
+                    left: 0;
+                    right: 0;
+                    background-color: $mainColor;
+                    transition: all 0.5s;
+                }
+                
+                a:focus {
+                    border: solid 3px $mainColor;
                 }
             }
         }

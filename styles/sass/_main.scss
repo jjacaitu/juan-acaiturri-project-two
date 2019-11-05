@@ -16,6 +16,11 @@ main {
         
     }
 
+
+    //------------------------------------------
+    //             MAIN PAGE
+    // -----------------------------------------
+
     .new_techniques {
         padding-top: 15vw;
         padding-bottom: 5vw;
@@ -51,7 +56,7 @@ main {
 
             .new_techniques_image {
                 background-image: url(../assets/small-box.jpg);
-                height: 300px;
+                height: auto;
                 flex-basis: 300px;
                 box-shadow: $mainColor -20px 20px 0px;
                 background-size: cover;
@@ -128,6 +133,7 @@ main {
                     border-radius: 50%;
                     padding: 8px;
                     width: 40px;
+                    height: 40px;
                     margin-right: 15px;
                     margin-top: 10px;
 
@@ -139,15 +145,9 @@ main {
                     }
                 }
 
-                &:nth-child(3) {
-                    i {
-                        transform: rotateX(180deg);
-                    }    
-                }
 
                 .details {
-                    // flex-basis: 90%;
-
+                    
                     .detail_heading {
                         display: flex;
                         justify-content: start;
@@ -280,9 +280,7 @@ main {
                     @include mq-phone {
                         width: 100%;
                         margin-left: 0;
-                    }
-                    
-                    
+                    } 
                 }
             
 
@@ -313,8 +311,6 @@ main {
                 @include mq-phone {
                     box-shadow: none;
                 }
-                
-
             }
 
         }
@@ -343,7 +339,10 @@ main {
         }
     }
 
-    // Blog
+    // -------------------------------------------------
+    //              BLOG
+    //  ------------------------------------------------
+
     .blog_top {
         color: white;
         display: flex;
@@ -382,6 +381,7 @@ main {
 
             @include mq-tablet {
                 position: initial;
+                width: 100%;
             }
         
             .information {
@@ -414,12 +414,15 @@ main {
                 position: relative;
                 top: -20px;
 
+                
+
                 @include mq-phone {
                     
                     box-shadow: none;
-                    border: 10px solid $mainColor;
+                    border-bottom: 10px solid $mainColor;
                     padding: 0;
                     width: 100%;
+
                     
                 }
             }
@@ -437,6 +440,9 @@ main {
 
             @include mq-tablet {
                     margin-top: 0;
+                    padding-left: 0;
+                    width: 100%;
+                    
                 }
             
             .mission_image {
@@ -455,7 +461,7 @@ main {
 
                 @include mq-phone {
                     box-shadow: none;
-                    border: 10px solid $mainColor;
+                    border-bottom: 10px solid $mainColor;
                     padding: 0;
                     width: 100%;
                     margin: 0;
@@ -485,12 +491,15 @@ main {
             @include mq-tablet {
                     height: 400px;
                 }
+            @include mq-phone {
+                height: 300px;
+            }
         }
 
-        .collection,.mission {
+        .collection .information,.mission .information {
             @include mq-tablet {
-                width: 100%;
-                padding: 0 5%;
+                
+                padding: 0 5% 40px;
             }
         }
     }
@@ -564,7 +573,9 @@ main {
 
     }
 
-    // Contact
+    // -----------------------------------
+    //         CONTACT
+    // -----------------------------------
 
     .comments_main {
         display: flex;

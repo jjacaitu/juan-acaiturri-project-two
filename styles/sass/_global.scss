@@ -3,6 +3,14 @@ html {
     overflow-x: hidden;
 
     body {
+        
+        font-family: 'Lato', sans-serif;
+        font-size: 1rem;
+        line-height: 28px;
+        letter-spacing: 2px;
+        color: $secondBlack;
+        overflow-x: hidden;
+
 
         .skip-link {
             position: absolute;
@@ -18,16 +26,7 @@ html {
         .skip-link:focus {
             left: 20%;
         }
-
-        font-family: 'Lato', sans-serif;
-        font-size: 1rem;
-        line-height: 28px;
-        letter-spacing: 2px;
-        color: $secondBlack;
-        overflow-x: hidden;
-
-        
-
+   
         .wrapper {
             width: 80%;
             margin: 0 auto;
@@ -43,13 +42,12 @@ html {
 }
 
 ul,li {
-            list-style: none;
+    list-style: none;
 
 }
 
 ul {
     margin: 0;
-    // padding: 0;
 }
 
 a {
@@ -62,24 +60,22 @@ h1, h2, h3, h4, p {
     padding: 0;
 }
 
-
-
 img {
     width: 100%;
     display: block;
 }
 
 h1 {
-        font-size: 2.9rem;
-        line-height: 64px;
-        color: $darkerColor;
-        font-family: 'Pacifico', cursive;
-        width: 700px;
-        margin-top: 50px;
+    font-size: 2.9rem;
+    line-height: 64px;
+    color: $darkerColor;
+    font-family: 'Pacifico', cursive;
+    width: 700px;
+    margin-top: 50px;
 
-        @include mq-tablet {
-            width: 350px;
-        }
+    @include mq-tablet {
+        width: 350px;
+    }
 }
 
 h2 {
@@ -125,9 +121,6 @@ form {
         
     }
 
-    
-
-
     fieldset {
         border: none;
         display: flex;
@@ -167,8 +160,6 @@ form {
         }
         
     }
-
-    
 
     input {
         border: none;

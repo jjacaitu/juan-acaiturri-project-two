@@ -425,7 +425,6 @@ header {
   background-size: cover;
   position: relative;
   background-position: top;
-  position: relative;
 }
 
 @media (max-width: 980px) {
@@ -539,7 +538,7 @@ header .header_top nav ul li {
   margin: 0 20px;
 }
 
-header .header_top nav ul a {
+header .header_top nav ul a, header .header_top nav ul span {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -547,10 +546,12 @@ header .header_top nav ul a {
   line-height: 29px;
   color: inherit;
   position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 @media (max-width: 770px) {
-  header .header_top nav ul a {
+  header .header_top nav ul a, header .header_top nav ul span {
     width: 70%;
     height: 100%;
     display: block;
@@ -559,22 +560,26 @@ header .header_top nav ul a {
   }
 }
 
-header .header_top nav ul a::before {
+header .header_top nav ul a:hover {
+  text-shadow: 2px 2px #0CADC0;
+}
+
+header .header_top nav ul span {
+  display: block;
+}
+
+header .header_top nav ul span::before {
   content: "";
   position: absolute;
-  bottom: -10px;
-  width: 0;
-  height: 5px;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
   border-radius: 20px;
   left: 0;
   right: 0;
   background-color: #0CADC0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-header .header_top nav ul a:hover::before {
-  width: 100%;
 }
 
 header .header_top nav ul a:focus {
@@ -692,7 +697,7 @@ main .new_techniques .new_techniques_main .information {
 
 main .new_techniques .new_techniques_main .new_techniques_image {
   background-image: url(../assets/small-box.jpg);
-  height: 300px;
+  height: auto;
   -ms-flex-preferred-size: 300px;
       flex-basis: 300px;
   -webkit-box-shadow: #0CADC0 -20px 20px 0px;
@@ -798,6 +803,7 @@ main .general_info .general_info_main .information_segment .icon {
   border-radius: 50%;
   padding: 8px;
   width: 40px;
+  height: 40px;
   margin-right: 15px;
   margin-top: 10px;
 }
@@ -806,11 +812,6 @@ main .general_info .general_info_main .information_segment .icon i {
   color: white;
   display: block;
   font-size: 1.2rem;
-}
-
-main .general_info .general_info_main .information_segment:nth-child(3) i {
-  -webkit-transform: rotateX(180deg);
-          transform: rotateX(180deg);
 }
 
 main .general_info .general_info_main .information_segment .details .detail_heading {
@@ -1113,6 +1114,7 @@ main .blog_top .collection {
 @media (max-width: 980px) {
   main .blog_top .collection {
     position: initial;
+    width: 100%;
   }
 }
 
@@ -1149,7 +1151,7 @@ main .blog_top .collection .collection_image {
   main .blog_top .collection .collection_image {
     -webkit-box-shadow: none;
             box-shadow: none;
-    border: 10px solid #0CADC0;
+    border-bottom: 10px solid #0CADC0;
     padding: 0;
     width: 100%;
   }
@@ -1167,6 +1169,8 @@ main .blog_top .mission {
 @media (max-width: 980px) {
   main .blog_top .mission {
     margin-top: 0;
+    padding-left: 0;
+    width: 100%;
   }
 }
 
@@ -1192,7 +1196,7 @@ main .blog_top .mission .mission_image {
   main .blog_top .mission .mission_image {
     -webkit-box-shadow: none;
             box-shadow: none;
-    border: 10px solid #0CADC0;
+    border-bottom: 10px solid #0CADC0;
     padding: 0;
     width: 100%;
     margin: 0;
@@ -1219,10 +1223,15 @@ main .blog_top .mission .information li {
   }
 }
 
+@media (max-width: 550px) {
+  main .blog_top .collection .collection_image, main .blog_top .mission .mission_image {
+    height: 300px;
+  }
+}
+
 @media (max-width: 980px) {
-  main .blog_top .collection, main .blog_top .mission {
-    width: 100%;
-    padding: 0 5%;
+  main .blog_top .collection .information, main .blog_top .mission .information {
+    padding: 0 5% 40px;
   }
 }
 
