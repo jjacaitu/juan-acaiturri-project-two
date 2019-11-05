@@ -420,7 +420,7 @@ form button {
 
 header {
   height: 95vh;
-  min-height: 700px;
+  min-height: 600px;
   background-image: url(../assets/header-home.jpg);
   background-size: cover;
   position: relative;
@@ -610,10 +610,6 @@ header img {
   background-image: url("../assets/blog-header.jpg");
 }
 
-.blog_header h1 {
-  margin-top: 150px;
-}
-
 .contact_header {
   background-image: url("../assets/contact-header.jpg");
   background-position: right;
@@ -621,6 +617,13 @@ header img {
 
 .contact_header h1 {
   width: 100%;
+}
+
+.contact_header, .blog_header {
+  height: 65vh;
+}
+
+.contact_header h1, .blog_header h1 {
   margin-top: 150px;
 }
 
