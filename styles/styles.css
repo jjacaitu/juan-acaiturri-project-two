@@ -737,6 +737,7 @@ main .gallery .gallery_main {
 
 main .gallery .gallery_main img {
   width: calc(100% / 3 - (4% / 3));
+  max-height: calc(33vw / 3 - (4% / 3));
   margin-right: 2%;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
