@@ -225,7 +225,7 @@ html body {
   overflow-x: hidden;
 }
 
-html body .skip-link {
+html body .skip_link {
   position: absolute;
   left: -1000px;
   top: 20px;
@@ -236,7 +236,7 @@ html body .skip-link {
   padding: 10px;
 }
 
-html body .skip-link:focus {
+html body .skip_link:focus {
   left: 20%;
 }
 

@@ -12,7 +12,7 @@ html {
         overflow-x: hidden;
 
 
-        .skip-link {
+        .skip_link {
             position: absolute;
             left: -1000px;
             top: 20px;
@@ -23,7 +23,7 @@ html {
             padding: 10px;
         }
 
-        .skip-link:focus {
+        .skip_link:focus {
             left: 20%;
         }
    
@@ -89,18 +89,6 @@ h2 {
 
 }
 
-// h3 {
-//     letter-spacing: 4.3px;
-//     font-size: 2rem;
-//     font-family: 'Pacifico', cursive;
-// }
-
-
-// h4 {
-//     letter-spacing: 2.5px;
-//     line-height: 58px;
-//     font-size: 2rem;
-// }
 
 h3 {
     font-family: 'Pacifico', cursive;
