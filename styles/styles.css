@@ -1447,6 +1447,10 @@ main .comments_main .contact_info ul li:hover, main .comments_main .contact_info
           animation: animate ease-in-out infinite 1s both;
 }
 
+main .comments_main .contact_info ul li:last-of-type {
+  margin-right: 0;
+}
+
 main .comments_main .contact_info p:nth-of-type(1) {
   padding: 20px 0;
 }

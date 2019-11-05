@@ -662,6 +662,10 @@ main {
                     &:hover, :focus {
                         animation: animate ease-in-out infinite 1s both;
                     }
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
                 }
             }
 
