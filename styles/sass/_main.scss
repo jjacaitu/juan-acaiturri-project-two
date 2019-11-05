@@ -80,6 +80,7 @@ main {
 
             @include mq-small-tablet {
                 flex-direction: column;
+                align-content: center;
             }
 
             img {
@@ -88,7 +89,7 @@ main {
                 transition: all 0.3s;
 
                 @include mq-small-tablet {
-                    width: 100%;
+                    width: 80%;
                     margin-right: 0;
                     margin-bottom: 10%;
                 }

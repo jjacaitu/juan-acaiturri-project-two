@@ -733,6 +733,8 @@ main .gallery .gallery_main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
 }
 
@@ -745,7 +747,7 @@ main .gallery .gallery_main img {
 
 @media (max-width: 770px) {
   main .gallery .gallery_main img {
-    width: 100%;
+    width: 80%;
     margin-right: 0;
     margin-bottom: 10%;
   }
