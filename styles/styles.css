@@ -745,7 +745,8 @@ main .gallery .gallery_main img {
 
 @media (max-width: 770px) {
   main .gallery .gallery_main img {
-    width: 80%;
+    width: 90vw;
+    height: 90vw;
     margin-right: 0;
     margin-bottom: 10%;
   }

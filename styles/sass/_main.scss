@@ -89,7 +89,8 @@ main {
                 height: auto;
 
                 @include mq-small-tablet {
-                    width: 80%;
+                    width: 90vw;
+                    height: 90vw;
                     margin-right: 0;
                     margin-bottom: 10%;
                 }
