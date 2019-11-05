@@ -79,14 +79,14 @@ main {
             flex-wrap: wrap;
 
             @include mq-small-tablet {
-                flex-direction: column;
-                align-content: center;
+                justify-content: center;
             }
 
             img {
                 width: calc(100% / 3 - (4% / 3));
                 margin-right: 2%;
                 transition: all 0.3s;
+                height: auto;
 
                 @include mq-small-tablet {
                     width: 80%;
