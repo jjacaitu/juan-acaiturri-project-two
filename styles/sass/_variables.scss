@@ -1,9 +1,14 @@
+// Color variables
+
 $darkerColor: #1A315C;
 $lighterColor: #CCEDFB;
 $mainColor: #0CADC0;
 $firstBlack: #1E1713;
 $secondBlack: #161515;
 $backgroundColor: #21404F;
+
+
+// Media queries mixins
 
 @mixin mq-tablet {
     @media (max-width:980px) {
@@ -28,6 +33,8 @@ $backgroundColor: #21404F;
         @content
     }
 }
+
+// Animations for social netweorks icons
 
 @keyframes animate {
     0%, 100% {

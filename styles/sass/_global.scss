@@ -37,9 +37,10 @@ html {
                 width: 90%;
             }
         }
-
     }
 }
+
+// Getting rid of defaults
 
 ul,li {
     list-style: none;
@@ -55,6 +56,8 @@ a {
     color: inherit;
 }
 
+
+
 h1, h2, h3, h4, p {
     margin: 0;
     padding: 0;
@@ -64,6 +67,8 @@ img {
     width: 100%;
     display: block;
 }
+
+// General styles for the h1
 
 h1 {
     font-size: 2.9rem;
@@ -78,6 +83,8 @@ h1 {
     }
 }
 
+// General styles for the h2
+
 h2 {
     letter-spacing: 2.7px;
     font-size: 2.15rem;
@@ -89,6 +96,8 @@ h2 {
 
 }
 
+// General styles for the h3
+
 
 h3 {
     font-family: 'Pacifico', cursive;
@@ -96,6 +105,8 @@ h3 {
     letter-spacing: 2.9px;
     
 }
+
+// General styles for the forms
 
 form {
 

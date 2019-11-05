@@ -78,7 +78,9 @@ main {
             display: flex;
             flex-wrap: wrap;
 
-            
+            @include mq-small-tablet {
+                flex-direction: column;
+            }
 
             img {
                 width: calc(100% / 3 - (4% / 3));
@@ -101,7 +103,6 @@ main {
             }
         }
 
-        
     }
 
     .general_info {
@@ -355,17 +356,13 @@ main {
         }
 
         h2 {
-            font-size: 1.25rem;
+            font-size: 1.75rem;
             letter-spacing: 2.9px;
             padding: 0;
             color: white;
         }
 
-        h3 {
-            font-size: 2rem;
-            letter-spacing: 4.3px;
-            color: $secondBlack;
-        }
+        
 
         p {
             padding: 20px 0;
@@ -508,6 +505,11 @@ main {
         background-color: $lighterColor;
 
         h3 {
+
+            font-size: 2rem;
+            letter-spacing: 4.3px;
+            color: $secondBlack;
+        
             @include mq-tablet {
                 padding-top: 50px;
             }
