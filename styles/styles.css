@@ -626,12 +626,13 @@ header img {
 
 main .button {
   background-color: #1A315C;
-  padding: 10px 20px;
+  padding: 10px 40px;
   color: white;
   font-family: 'Pacifico', cursive;
   margin-top: 30px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  font-size: 1.35rem;
 }
 
 main .button:hover, main .button :focus {
