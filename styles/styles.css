@@ -530,6 +530,7 @@ header .header_top nav ul {
             align-items: center;
     padding: 50px 0;
     border: solid 5px #0CADC0;
+    border-radius: 20px;
   }
 }
 
