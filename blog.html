@@ -41,6 +41,44 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi alias nulla non laboriosam pariatur maiores, corporis tempore rem culpa quidem similique dignissimos quis odit voluptates assumenda illum repellendus commodi natus veniam eius modi perspiciatis officia sed. Recusandae omnis nobis quasi adipisci in nostrum repudiandae dolorem voluptates dicta! Sint, eligendi placeat.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ut cupiditate id tempora corrupti numquam nulla fugit perferendis hic sit!</p>
                 </div>
+                <section class="comments">
+                    <h3>Comments:</h3>
+                    <article>
+                        <img src="./assets/comment-1.jpg" alt="">
+                        <div class="comment_detail">
+                            <p>Tuesday December 9th, 2019 by Louise</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam libero aliquid cum, pariatur
+                                alias at labore suscipit dolor doloribus ipsam recusandae modi quis mollitia veritatis, explicabo
+                                repellat dolorem minus enim.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/comment-2.jpg" alt="">
+                        <div class="comment_detail">
+                            <p>Wednesday December 10th, 2019 by JP</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel beatae odio minus atque aspernatur.
+                                Dignissimos saepe repudiandae dolores nisi sequi reprehenderit fugit sint soluta excepturi,
+                                blanditiis officia facere voluptatibus rerum.</p>
+                        </div>
+                    </article>
+                </section>
+                <section class="form_section">
+                    <form action="">
+                        <fieldset>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </fieldset>
+                        <fieldset>
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" required>
+                        </fieldset>
+            
+                        <label for="comment" class="visuallyHidden">Comments</label>
+                        <textarea name="comment" id="comment" cols="30" rows="8" placeholder="Comments" required></textarea>
+            
+                        <button class="button" type="submit">post comment</button>
+                    </form>
+                </section>
             </section>
             <aside class="mission" id="about">
                 <div class="mission_image"></div>
@@ -56,46 +94,7 @@
                     </ul>
                 </div>
             </aside>
-        </section>
-        <section class="comments">
-            <div class="wrapper">
-                <h3>Comments:</h3>
-                <article>
-                    <img src="./assets/comment-1.jpg" alt="">
-                    <div class="comment_detail">
-                        <p>Tuesday December 9th, 2019 by Louise</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam libero aliquid cum, pariatur alias at labore suscipit dolor doloribus ipsam recusandae modi quis mollitia veritatis, explicabo repellat dolorem minus enim.</p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./assets/comment-2.jpg" alt="">
-                    <div class="comment_detail">
-                        <p>Wednesday December 10th, 2019 by JP</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel beatae odio minus atque aspernatur. Dignissimos saepe repudiandae dolores nisi sequi reprehenderit fugit sint soluta excepturi, blanditiis officia facere voluptatibus rerum.</p>
-                    </div>
-                </article>
-            </article>
-        </section>
-        <section class="form_section">
-            <div class="wrapper">
-                <form action="">
-                    <fieldset>
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </fieldset>
-                    <fieldset>
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" required>
-                    </fieldset>
-                    
-                    <label for="comment" class="visuallyHidden">Comments</label>
-                    <textarea name="comment" id="comment" cols="30" rows="8" placeholder="Comments" required></textarea>
-
-                    <button class="button" type="submit">post comment</button>
-                </form>
-            </div>
-        </section>
-        
+        </section>        
     </main>
     <footer>
         <p class="copyright">Copyright © 2019 Juno College</p>

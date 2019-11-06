@@ -9,8 +9,8 @@ header {
     background-position: top;
 
     @include mq-tablet {
-            min-height: 500px;
-            height: 60vh;
+            min-height: 600px;
+            height: 65vh;
         }
 
     .index_header {

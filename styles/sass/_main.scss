@@ -68,7 +68,6 @@ main {
 
         }
 
-        
     }
 
     .gallery {
@@ -94,10 +93,6 @@ main {
                     height: 90vw;
                     margin-right: 0;
                     margin-bottom: 10%;
-                }
-
-                &:hover {
-                    transform: scale(1.1);
                 }
 
                 &:nth-of-type(3){
@@ -365,13 +360,9 @@ main {
             color: white;
         }
 
-        
-
         p {
             padding: 20px 0;
         }
-
-        
 
         .collection {
             position: relative;
@@ -390,11 +381,107 @@ main {
                 padding: 60px 50px 100px 10vw;
 
                 
-                @include mq-tablet {
+                @include mq-small-tablet {
                     border: none;
                     padding: 50px 0;
                 }
         
+            }
+
+            .comments {
+                background-color: $lighterColor;
+                padding-left: 10vw;
+                padding-right: 20px;
+
+                @include mq-tablet {
+                    padding: 0 10vw;
+                }
+
+                @include mq-small-tablet {
+                    padding: 0 5vw;
+                }
+
+                h3 {
+                    padding-top: 50px;
+                    font-size: 2rem;
+                    letter-spacing: 4.3px;
+                    color: $secondBlack;
+                
+                    @include mq-tablet {
+                        padding-top: 50px;
+                    }
+                }
+                
+                article {
+                    display: flex;
+                    justify-content: start;
+                    align-items: flex-start;
+                    padding: 50px 0;
+
+                    p {
+                        padding-top: 0;
+                    }
+
+                    @include mq-small-tablet {
+                        padding: 40px 0;
+                    }
+
+                    @include mq-phone {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    
+                    img {
+                        width: 10%;
+
+                        @include mq-small-tablet {
+                            width: 25%;
+                        }
+
+                        @include mq-phone {
+                            padding-bottom:40px;
+                        }
+                    }
+                    .comment_detail {
+                        width: 90%;
+                        padding-left: 40px ;
+
+                        @include mq-phone {
+                            width: 100%;
+                            padding-left: 0;
+                        }
+
+                        p{
+                            color: $secondBlack;
+                            padding-bottom: 10px;
+
+
+                            &:first-child {
+                            color: $darkerColor;
+                            }
+                        }  
+                    }
+                }
+            }
+
+            .form_section {
+                background-color: $lighterColor;
+                padding-bottom: 100px;
+                
+                form {
+                    width: 100%;
+                    padding-left: 10vw;
+                    color: $firstBlack;
+
+                    @include mq-tablet {
+                        padding: 0 10vw;
+                    }
+
+                    @include mq-small-tablet {
+                        padding: 0 5vw;
+                    }
+                }
+
             }
             
 
@@ -402,8 +489,6 @@ main {
                 color: $lighterColor;
             }
             
-
-
             .collection_image {
                 background-image: url(../assets/blog-post-image.jpg);
                 width: calc(100% - 20px);
@@ -414,20 +499,16 @@ main {
                 position: relative;
                 top: -20px;
 
-                
-
                 @include mq-phone {
                     
                     box-shadow: none;
                     border-bottom: 10px solid $mainColor;
                     padding: 0;
                     width: 100%;
-
-                    
+  
                 }
             }
 
-        
         }
 
         .mission {
@@ -441,8 +522,7 @@ main {
             @include mq-tablet {
                     margin-top: 0;
                     padding-left: 0;
-                    width: 100%;
-                    
+                    width: 100%;   
                 }
             
             .mission_image {
@@ -504,178 +584,107 @@ main {
         }
     }
 
-    .comments {
-        background-color: $lighterColor;
-
-        h3 {
-
-            font-size: 2rem;
-            letter-spacing: 4.3px;
-            color: $secondBlack;
-        
-            @include mq-tablet {
-                padding-top: 50px;
-            }
-        }
-        
-        article {
-            display: flex;
-            justify-content: start;
-            align-items: flex-start;
-            width: 60%;
-            padding: 50px 0;
-
-            &:last-of-type {
-                padding-top:0;
-            }
-
-            @include mq-tablet {
-                width: 100%;
-            }
-
-            @include mq-phone {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-        
-
-            img {
-                width: 10%;
-
-                @include mq-phone {
-                    width: 30%;
-                    margin-bottom: 40px;
-                }
-            }
-            .comment_detail {
-                width: 90%;
-                padding-left: 40px ;
-
-                @include mq-phone {
-                    width: 100%;
-                    padding-left: 0;
-                }
-
-                p{
-                    color: $secondBlack;
-                    padding-bottom: 10px;
-
-
-                    &:first-child {
-                    color: $darkerColor;
-                     }
-                }
-
-                
-            }
-        }
-    }
-
-    .form_section {
-        background-color: $lighterColor;
-        padding-bottom: 100px;
-
-    }
+    
 
     // -----------------------------------
     //         CONTACT
     // -----------------------------------
-
-    .comments_main {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        
-
-        @include mq-tablet {
-            flex-direction: column;
-            padding-top: 50px;
-        }
-        
-
-        form {
-            background-color: $backgroundColor;
-            padding: 50px;
-            box-shadow: 20px 20px 0 $mainColor;
-            position: relative;
-            top: -100px;
-            color: white;
-            width: 75%;
+    .comments {
+        background-color: $lighterColor;
+    
+        .comments_main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
             @include mq-tablet {
-                box-shadow: none;
-                width: 100%;
-                
+                flex-direction: column;
+                padding-top: 50px;
             }
+            
 
-            @include mq-phone {
-                padding: 20px;
-            }   
-
-            textarea, input {
+            form {
                 background-color: $backgroundColor;
+                padding: 50px;
+                box-shadow: 20px 20px 0 $mainColor;
+                position: relative;
+                top: -100px;
                 color: white;
-                
-                &::placeholder {
-                    color: white;
-                }
-            }
+                width: 75%;
 
-            button {
-                background-color: $lighterColor;
-                color: $firstBlack;
-
-                &:hover, :focus {
-                    background-color: $darkerColor;
-                    color: $lighterColor;
-                    box-shadow: 10px 10px 0 $lighterColor;
-                    border: solid 1px $mainColor;
-                }
-            }
-        }
-
-        .contact_info {
-
-            margin-left: 100px;
-            width: 300px;
-            padding-bottom: 50px;
-
-            @include mq-tablet {
-                width: 100%;
-                text-align: center;
-                margin-left: 0;
-                
-            }
-            ul {
-                display: flex;
-                justify-content: start;
-                align-items: start;
-                margin: 0;
-                padding: 0;
-                
                 @include mq-tablet {
-                    justify-content: center;
+                    box-shadow: none;
+                    width: 100%;
+                    
                 }
 
-                li {
-                    margin-right: 20px;
-                    color: $darkerColor;
-                    transition: all 0.5s;
+                @include mq-phone {
+                    padding: 20px;
+                }   
+
+                textarea, input {
+                    background-color: $backgroundColor;
+                    color: white;
+                    
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+
+                button {
+                    background-color: $lighterColor;
+                    color: $firstBlack;
 
                     &:hover, :focus {
-                        animation: animate ease-in-out infinite 1s both;
-                    }
-
-                    &:last-of-type {
-                        margin-right: 0;
+                        background-color: $darkerColor;
+                        color: $lighterColor;
+                        box-shadow: 10px 10px 0 $lighterColor;
+                        border: solid 1px $mainColor;
                     }
                 }
             }
 
-            p:nth-of-type(1) {
-                padding: 20px 0;
+            .contact_info {
+
+                margin-left: 100px;
+                width: 300px;
+                padding-bottom: 50px;
+
+                @include mq-tablet {
+                    width: 100%;
+                    text-align: center;
+                    margin-left: 0;
+                    
+                }
+                ul {
+                    display: flex;
+                    justify-content: start;
+                    align-items: start;
+                    margin: 0;
+                    padding: 0;
+                    
+                    @include mq-tablet {
+                        justify-content: center;
+                    }
+
+                    li {
+                        margin-right: 20px;
+                        color: $darkerColor;
+                        transition: all 0.5s;
+
+                        &:hover, :focus {
+                            animation: animate ease-in-out infinite 1s both;
+                        }
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                p:nth-of-type(1) {
+                    padding: 20px 0;
+                }
             }
         }
     }
